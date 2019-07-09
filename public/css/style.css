@@ -1,0 +1,23 @@
+.card .title {
+  background-color: yellow;
+  padding: 10px;
+}
+
+.card .content {
+  background-color: cyan;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.card .subtitle {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.card .myTitle {
+  background-color: orange;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
