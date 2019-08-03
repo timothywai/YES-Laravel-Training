@@ -16,4 +16,30 @@ class CommentController extends Controller
 
         // var_dump($blog->comments);
     }
+
+    public function getcomments($id)
+    {
+        $blog = Blog::find($id);
+
+        // dd($blog);
+
+        $comments = $blog->comments;
+
+        $myObject = (object) array('title' => $blog->title, 'content' => $blog->content, 'comments' => array());
+
+        // $arraysize = sizeof($comments);
+
+        if (sizeof($comments)){
+          $ArrySize = sizeof($comments);
+          for ($i = 0 ; $i < $ArrySize; $i++)
+          {
+            $myObject->comments[$i] = $comments[0]->comment;
+          }
+        }
+        // dd($arraysize);
+
+
+        // dd(json_encode($myObject));
+        return (json_encode($myObject));
+    }
 }
